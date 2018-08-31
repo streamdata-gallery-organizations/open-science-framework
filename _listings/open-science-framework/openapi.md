@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Open Science Framework
 x-complete: 1
@@ -2587,15 +2586,18 @@ paths:
   /registrations/{registration_id}/forks/:
     get:
       summary: List all forks
-      description: "A paginated list of the registration\u2019s forks\n\nThe returned
-        forks are sorted by their `forked_date`, with the most recent forks appearing
-        first.\n\nForking a registration creates a copy of an existing registration
-        and all of its contents.\n#### Returns\nReturns a JSON object containing `data`
-        and `links` keys.\n\nThe `data` key contains an array of up to 10 forks. If
-        the current registration has no fork, the `data` key will contain an empty
-        array. Each resource in the array is a separate registration object and contains
-        the full representation of the registration's fork.\n\nThe `links` key contains
-        a dictionary of links that can be used for [pagination](#Introduction_pagination)."
+      description: |-
+        A paginated list of the registration???s forks
+
+        The returned forks are sorted by their `forked_date`, with the most recent forks appearing first.
+
+        Forking a registration creates a copy of an existing registration and all of its contents.
+        #### Returns
+        Returns a JSON object containing `data` and `links` keys.
+
+        The `data` key contains an array of up to 10 forks. If the current registration has no fork, the `data` key will contain an empty array. Each resource in the array is a separate registration object and contains the full representation of the registration's fork.
+
+        The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
       operationId: registrations_forks_list
       x-api-path-slug: registrationsregistration-idforks-get
       parameters:
@@ -3328,4 +3330,3 @@ paths:
       - Wikis
       - Wiki
       - Content
----

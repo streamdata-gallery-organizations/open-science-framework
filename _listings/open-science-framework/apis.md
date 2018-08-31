@@ -12,13 +12,13 @@ image: ""
 x-kinRank: "7"
 x-alexaRank: "0"
 tags: Open Science Framework
-created: "2018-06-26"
-modified: "2018-06-26"
+created: "2018-08-30"
+modified: "2018-08-30"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Open Science Framework Root
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Root
+  x-api-slug: get
   description: |-
     Welcome to the Open Science Framework API. With this API you can access users, projects, components, logs, and files from the [Open Science Framework](https://osf.io/). The Open Science Framework (OSF) is a free, open-source service maintained by the [Center for Open Science](http://cos.io/).
 
@@ -30,15 +30,15 @@ apis:
     The `links` key contains links to the following entity collections: [addons](), [collections](), [institutions](#Institutions_institutions_list), [licenses](#Licenses_license_list), [metaschemas](), [nodes](#Nodes_nodes_list), [registrations](), [users](#Users_users_list)
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//
-  tags: Root
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/get-openapi.md
-- name: Open Science Framework Actions
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Actions
+  x-api-slug: actions-get
   description: |-
     A log can have one of many actions. The complete list of loggable actions (in the format {identifier}: {description}) is as follows:
     * `project_created`: A Node is created
@@ -104,15 +104,15 @@ apis:
     * `registration_cancelled`: A proposed Registration is cancelled
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//actions/
-  tags: Actions
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/actions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/actions-get-openapi.md
-- name: Open Science Framework List all addons
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all addons
+  x-api-slug: addons-get
   description: |-
     A paginated list of addons configurable with the OSF
     #### Returns
@@ -125,15 +125,15 @@ apis:
     This request should never return an error.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//addons/
-  tags: Addons
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/addons-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/addons-get-openapi.md
-- name: Open Science Framework List all citation styles
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all citation styles
+  x-api-slug: citationsstyles-get
   description: |-
     A paginated list of all standard citation styles available for rendering citations.
     #### Returns
@@ -150,15 +150,15 @@ apis:
     Citation styles may be filtered by their `id`, `title`, `short-title`, and `summary`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//citations/styles/
-  tags: Citations,Styles
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/citationsstyles-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/citationsstyles-get-openapi.md
-- name: Open Science Framework Retrieve a citation style
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a citation style
+  x-api-slug: citationsstylesstyle-id-get
   description: |-
     Retrieves the details of a citation style.
     #### Returns
@@ -167,15 +167,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//citations/styles/{style_id}/
-  tags: Citations,Styles,Style
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/citationsstylesstyle-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/citationsstylesstyle-id-get-openapi.md
-- name: Open Science Framework Delete a comment
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Delete a comment
+  x-api-slug: commentscomment-id-delete
   description: |-
     Deletes a comment. This action can be undone by setting deleted to False in a comment update request.
     #### Returns
@@ -184,15 +184,15 @@ apis:
     If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//comments/{comment_id}/
-  tags: Comments,Comment
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/commentscomment-id-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/commentscomment-id-delete-openapi.md
-- name: Open Science Framework Retrieve a comment
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a comment
+  x-api-slug: commentscomment-id-get
   description: |-
     Retrieves the details of a comment
     ####Returns
@@ -201,15 +201,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//comments/{comment_id}/
-  tags: Comments,Comment
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/commentscomment-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/commentscomment-id-get-openapi.md
-- name: Open Science Framework Update a comment
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a comment
+  x-api-slug: commentscomment-id-put
   description: |-
     Updates the specified comment by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
     #### Returns
@@ -218,13 +218,13 @@ apis:
     If the request is unsuccessful, JSON with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//comments/{comment_id}/
-  tags: Comments,Comment
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/commentscomment-id-put-openapi.md
-- name: Open Science Framework Retrieve a file
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a file
+  x-api-slug: filesfile-id-get
   description: |-
     Retrieves the details of a file (or folder)
     ####Returns
@@ -268,15 +268,15 @@ apis:
     To delete a file or folder send a DELETE request to the delete link. Nothing will be returned in the response body.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//files/{file_id}/
-  tags: Files,File
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/filesfile-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/filesfile-id-get-openapi.md
-- name: Open Science Framework Update a file
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a file
+  x-api-slug: filesfile-id-patch
   description: |-
     Updates the specified file by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
     #### Returns
@@ -285,13 +285,13 @@ apis:
     If the request is unsuccessful, JSON with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//files/{file_id}/
-  tags: Files,File
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/filesfile-id-patch-openapi.md
-- name: Open Science Framework List all file versions
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all file versions
+  x-api-slug: filesfile-idversions-get
   description: |-
     A paginated list of all file versions.
     #### Returns
@@ -304,13 +304,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//files/{file_id}/versions/
-  tags: Files,File,Versions
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/filesfile-idversions-get-openapi.md
-- name: Open Science Framework Retrieve a file version
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a file version
+  x-api-slug: filesfile-idversionsversion-id-get
   description: |-
     Retrieves the details of a file version
     ####Returns
@@ -320,13 +320,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//files/{file_id}/versions/{version_id}/
-  tags: Files,File,Versions,Version
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/filesfile-idversionsversion-id-get-openapi.md
-- name: Open Science Framework List all institutions
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all institutions
+  x-api-slug: institutions-get
   description: |-
     A paginated list of all verified institutions.
     #### Returns
@@ -343,13 +343,13 @@ apis:
     Institutions may be filtered by their `id`, `name`, and `auth_url`
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//institutions/
-  tags: Institutions
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutions-get-openapi.md
-- name: Open Science Framework Retrieve an institution
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve an institution
+  x-api-slug: institutionsinstitution-id-get
   description: |-
     Retrieves the details of an institution
     ####Returns
@@ -358,13 +358,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//institutions/{institution_id}/
-  tags: Institutions,Institution
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutionsinstitution-id-get-openapi.md
-- name: Open Science Framework List all affiliated nodes
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all affiliated nodes
+  x-api-slug: institutionsinstitution-idnodes-get
   description: |-
     A paginated list of all nodes affiliated with an institution.
     #### Versioning
@@ -383,15 +383,15 @@ apis:
     Nodes may be filtered by their `id`, `title`, `description`, `public`, `tags`, `category`, `date_created`, `date_modified`, `root`, `parent`, `contributors`, and `preprint`
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//institutions/{institution_id}/nodes/
-  tags: Institutions,Institution,Nodes
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutionsinstitution-idnodes-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutionsinstitution-idnodes-get-openapi.md
-- name: Open Science Framework List all affiliated registrations
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all affiliated registrations
+  x-api-slug: institutionsinstitution-idregistrations-get
   description: |-
     A paginated list of all registrations affiliated with an institution.
     #### Returns
@@ -408,15 +408,15 @@ apis:
     Registrations may be filtered by their  `id`, `title`, `description`, `public`, `tags`, `category`, `date_created`, `date_modified`, `root`, `parent`, `contributors`, and `preprint`
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//institutions/{institution_id}/registrations/
-  tags: Institutions,Institution,Registrations
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutionsinstitution-idregistrations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutionsinstitution-idregistrations-get-openapi.md
-- name: Open Science Framework List all affiliated users
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all affiliated users
+  x-api-slug: institutionsinstitution-idusers-get
   description: |-
     A paginated list of all users affiliated with an institution.
     #### Returns
@@ -433,15 +433,15 @@ apis:
     Users may be filtered by their `id`, `full_name`, `given_name`, `middle_names`, and `family_name`
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//institutions/{institution_id}/users/
-  tags: Institutions,Institution,Users
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutionsinstitution-idusers-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/institutionsinstitution-idusers-get-openapi.md
-- name: Open Science Framework Retrieve a license
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a license
+  x-api-slug: licenselicense-id-get
   description: |-
     Retrieves the details of a license.
     #### Returns
@@ -450,13 +450,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//license/{license_id}/
-  tags: License,License
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/licenselicense-id-get-openapi.md
-- name: Open Science Framework List all licenses
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all licenses
+  x-api-slug: licenses-get
   description: |-
     A paginated list of licenses. The returned licenses are sorted by their name.
     #### Returns
@@ -472,15 +472,15 @@ apis:
     Licenses may be filtered by their `id`, and `name`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//licenses/
-  tags: Licenses
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/licenses-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/licenses-get-openapi.md
-- name: Open Science Framework Retrieve a log
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a log
+  x-api-slug: logslog-id-get
   description: |-
     Retrieves the details of a log.
     A log is permanent immutable record of a node's history. A log is created when a user performs one of many actions. See the [actions](#Logs_logs_actions) section for more details.
@@ -490,13 +490,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//logs/{log_id}/
-  tags: Logs,Log
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/logslog-id-get-openapi.md
-- name: Open Science Framework List all metaschemas
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all metaschemas
+  x-api-slug: metaschemas-get
   description: |-
     A paginated list of all active metaschemas.
     Metaschemas describe the supplemental questions that accompany a registration.
@@ -510,13 +510,13 @@ apis:
     This request should never return an error.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//metaschemas/
-  tags: Metaschemas
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/metaschemas-get-openapi.md
-- name: Open Science Framework Retrieve a metaschema
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a metaschema
+  x-api-slug: metaschemasmetaschema-id-get
   description: |-
     Retrieves the details of a given metaschema.
 
@@ -528,13 +528,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//metaschemas/{metaschema_id}
-  tags: Metaschemas,Metaschema
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/metaschemasmetaschema-id-get-openapi.md
-- name: Open Science Framework List all nodes
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all nodes
+  x-api-slug: nodes-get
   description: |-
     A paginated list of nodes, representing projects and components, on the OSF.
 
@@ -559,15 +559,15 @@ apis:
     Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/
-  tags: Nodes
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodes-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodes-get-openapi.md
-- name: Open Science Framework Create a node
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a node
+  x-api-slug: nodes-post
   description: |-
     Creates a new node.
 
@@ -588,13 +588,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/
-  tags: Nodes
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodes-post-openapi.md
-- name: Open Science Framework Delete a node
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Delete a node
+  x-api-slug: nodesnode-id-delete
   description: |-
     Permanently deletes a node. This action cannot be undone.
     #### Permissions
@@ -605,13 +605,13 @@ apis:
     If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/
-  tags: Nodes,Node
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-id-delete-openapi.md
-- name: Open Science Framework Retrieve a node
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a node
+  x-api-slug: nodesnode-id-get
   description: |-
     Retrieves the details of a given node (project or component).
     #### Permissions
@@ -624,13 +624,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/
-  tags: Nodes,Node
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-id-get-openapi.md
-- name: Open Science Framework Update a node
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a node
+  x-api-slug: nodesnode-id-patch
   description: |-
     Updates a node by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
 
@@ -643,13 +643,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/
-  tags: Nodes,Node
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-id-patch-openapi.md
-- name: Open Science Framework List all addons
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all addons
+  x-api-slug: nodesnode-idaddons-get
   description: |-
     A paginated list of addons connected to the given node or project.
     #### Returns
@@ -660,15 +660,15 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/addons/
-  tags: Nodes,Node,Addons
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idaddons-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idaddons-get-openapi.md
-- name: Open Science Framework Retrieve an addon
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve an addon
+  x-api-slug: nodesnode-idaddonsprovider-get
   description: |-
     Retrieve details of an individual addon connected to this node.
     #### Permissions
@@ -680,15 +680,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/addons/{provider}/
-  tags: Nodes,Node,Addons,Provider
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idaddonsprovider-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idaddonsprovider-get-openapi.md
-- name: Open Science Framework Update an addon
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update an addon
+  x-api-slug: nodesnode-idaddonsprovider-patch
   description: |-
     Updates a node addon by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
 
@@ -705,13 +705,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/addons/{provider}/
-  tags: Nodes,Node,Addons,Provider
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idaddonsprovider-patch-openapi.md
-- name: Open Science Framework List all addon folders
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all addon folders
+  x-api-slug: nodesnode-idaddonsproviderfolders-get
   description: |-
     A paginated list of folders retrieved from the associated third-party (provider) service.
     #### Permissions
@@ -724,13 +724,13 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/addons/{provider}/folders/
-  tags: Nodes,Node,Addons,Provider,Folders
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idaddonsproviderfolders-get-openapi.md
-- name: Open Science Framework List all child nodes
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all child nodes
+  x-api-slug: nodesnode-idchildren-get
   description: |-
     A paginated list of the next level child nodes for the given node. The returned nodes are sorted by their `date_modified`, with the most recently updated child nodes appearing first.
 
@@ -751,13 +751,13 @@ apis:
     Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/children/
-  tags: Nodes,Node,Children
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idchildren-get-openapi.md
-- name: Open Science Framework Create a child node
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a child node
+  x-api-slug: nodesnode-idchildren-post
   description: |-
     Creates a new child node.
 
@@ -778,39 +778,39 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/children/
-  tags: Nodes,Node,Children
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idchildren-post-openapi.md
-- name: Open Science Framework Retrieve citation details
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve citation details
+  x-api-slug: nodesnode-idcitation-get
   description: |-
     The citation details for a node, in CSL format.
     #### Returns
     Returns a JSON object with a `data` key that contains the representation of the details necessary for the node citation.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/citation/
-  tags: Nodes,Node,Citation
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcitation-get-openapi.md
-- name: Open Science Framework Retrieve a styled citation
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a styled citation
+  x-api-slug: nodesnode-idcitationstyle-id-get
   description: |-
     The citation for a node in a specific style.
     #### Returns
     Returns a JSON object with a `data` key that contains the representation of the node citation, in the requested style.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/citation/{style_id}/
-  tags: Nodes,Node,Citation,Style
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcitationstyle-id-get-openapi.md
-- name: Open Science Framework List all comments
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all comments
+  x-api-slug: nodesnode-idcomments-get
   description: |-
     A paginated list of comments related to a given node.
 
@@ -837,13 +837,13 @@ apis:
     Most fields are string fields and will be filtered using simple substring matching. Public and preprint are boolean fields, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting `true` or `false` in the query will cause the match to fail.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/comments/
-  tags: Nodes,Node,Comments
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcomments-get-openapi.md
-- name: Open Science Framework Create a comment
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a comment
+  x-api-slug: nodesnode-idcomments-post
   description: |-
     Create a comment on a given node overview page or a reply to a comment on that node.
 
@@ -859,13 +859,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/comments/
-  tags: Nodes,Node,Comments
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcomments-post-openapi.md
-- name: Open Science Framework List all contributors
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all contributors
+  x-api-slug: nodesnode-idcontributors-get
   description: |-
     A paginated list of the node's contributors, sorted by their index.
 
@@ -887,13 +887,13 @@ apis:
     Contributors may be filtered by their `bibliographic` and `permission` attributes.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/contributors/
-  tags: Nodes,Node,Contributors
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcontributors-get-openapi.md
-- name: Open Science Framework Create a contributor
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a contributor
+  x-api-slug: nodesnode-idcontributors-post
   description: |-
     Adds a contributor to a node, effectively creating a relationship between the node and a user.
 
@@ -912,13 +912,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/contributors/
-  tags: Nodes,Node,Contributors
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcontributors-post-openapi.md
-- name: Open Science Framework Delete a contributor
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Delete a contributor
+  x-api-slug: nodesnode-idcontributorsuser-id-delete
   description: |-
     Removes a contributor from a node. This request only removes the relationship between the node and the user, it does not delete the user itself.
 
@@ -931,13 +931,13 @@ apis:
     If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/contributors/{user_id}/
-  tags: Nodes,Node,Contributors,User
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcontributorsuser-id-delete-openapi.md
-- name: Open Science Framework Retrieve a contributor
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a contributor
+  x-api-slug: nodesnode-idcontributorsuser-id-get
   description: |-
     Retrieves the details of a given contributor.
 
@@ -950,13 +950,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/contributors/{user_id}/
-  tags: Nodes,Node,Contributors,User
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcontributorsuser-id-get-openapi.md
-- name: Open Science Framework Update a contributor
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a contributor
+  x-api-slug: nodesnode-idcontributorsuser-id-patch
   description: |-
     Updates a contributor by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
 
@@ -971,13 +971,13 @@ apis:
     If the given user is not already in the contributor list, a 404 Not Found error will be returned. A node must always have at least one admin, and any attempt to downgrade the permissions of a sole admin will result in a 400 Bad Request error.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/contributors/{user_id}/
-  tags: Nodes,Node,Contributors,User
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idcontributorsuser-id-patch-openapi.md
-- name: Open Science Framework List all draft registrations
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all draft registrations
+  x-api-slug: nodesnode-iddraft-registrations-get
   description: |-
     A paginated list of all of the draft registrations of a given node.
 
@@ -994,13 +994,13 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/draft_registrations/
-  tags: Nodes,Node,Draft,Registrations
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-iddraft-registrations-get-openapi.md
-- name: Open Science Framework Create a draft registration
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a draft registration
+  x-api-slug: nodesnode-iddraft-registrations-post
   description: |-
     Initiate a draft registration of the current node.
     Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
@@ -1018,13 +1018,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/draft_registrations/
-  tags: Nodes,Node,Draft,Registrations
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-iddraft-registrations-post-openapi.md
-- name: Open Science Framework Delete a draft registration
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Delete a draft registration
+  x-api-slug: nodesnode-iddraft-registrationsdraft-id-delete
   description: |-
     Permanently deletes a draft registration. A draft that has already been registered cannot be deleted.
     #### Permissions
@@ -1035,13 +1035,13 @@ apis:
     If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/draft_registrations/{draft_id}/
-  tags: Nodes,Node,Draft,Registrations,Draft
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-iddraft-registrationsdraft-id-delete-openapi.md
-- name: Open Science Framework Retrieve a draft registration
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a draft registration
+  x-api-slug: nodesnode-iddraft-registrationsdraft-id-get
   description: |-
     Retrieve the details of a given draft registration.
     Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
@@ -1055,13 +1055,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/draft_registrations/{draft_id}/
-  tags: Nodes,Node,Draft,Registrations,Draft
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-iddraft-registrationsdraft-id-get-openapi.md
-- name: Open Science Framework Update a draft registration
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a draft registration
+  x-api-slug: nodesnode-iddraft-registrationsdraft-id-patch
   description: |-
     Updates a draft registration by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
 
@@ -1080,13 +1080,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/draft_registrations/{draft_id}/
-  tags: Nodes,Node,Draft,Registrations,Draft
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-iddraft-registrationsdraft-id-patch-openapi.md
-- name: Open Science Framework List all storage providers
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all storage providers
+  x-api-slug: nodesnode-idfiles-get
   description: |-
     List of all storage providers that are configured for this node
 
@@ -1103,13 +1103,13 @@ apis:
     Note: In the OSF filesystem model, providers are treated as folders, but with special properties that distinguish them from regular folders. Every provider folder is considered a root folder, and may not be deleted through the regular file API.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/files/
-  tags: Nodes,Node,Files
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idfiles-get-openapi.md
-- name: Open Science Framework Retrieve a storage provider
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a storage provider
+  x-api-slug: nodesnode-idfilesprovidersprovider-get
   description: |-
     Retrieves the details of a storage provider enabled on this node.
     ####Returns
@@ -1118,13 +1118,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/files/providers/{provider}/
-  tags: Nodes,Node,Files,Providers,Provider
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idfilesprovidersprovider-get-openapi.md
-- name: Open Science Framework List all node files
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all node files
+  x-api-slug: nodesnode-idfilesprovider-get
   description: |-
     List of all the files/folders that are attached to your project for a given storage provider.
     ####Returns
@@ -1175,13 +1175,13 @@ apis:
     To delete a file or folder send a DELETE request to the delete link. Nothing will be returned in the response body.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/files/{provider}/
-  tags: Nodes,Node,Files,Provider
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idfilesprovider-get-openapi.md
-- name: Open Science Framework Retrieve a file
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a file
+  x-api-slug: nodesnode-idfilesproviderpath-get
   description: |-
     Retrieves the details of a file attached to given node (project or component) for the given storage provider.
     ####Returns
@@ -1190,13 +1190,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/files/{provider}/{path}/
-  tags: Nodes,Node,Files,Provider,Path
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idfilesproviderpath-get-openapi.md
-- name: Open Science Framework List all forks of this node
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all forks of this node
+  x-api-slug: nodesnode-idforks-get
   description: |-
     A paginated list of the current node's forks. The returned fork nodes are sorted by their `forked_date`, with the most recently forked nodes appearing first.
 
@@ -1211,13 +1211,13 @@ apis:
     This request should never return an error.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/forks/
-  tags: Nodes,Node,Forks
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idforks-get-openapi.md
-- name: Open Science Framework Create a fork of this node
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a fork of this node
+  x-api-slug: nodesnode-idforks-post
   description: |-
     Creates a fork of the given node.
 
@@ -1235,13 +1235,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/forks/
-  tags: Nodes,Node,Forks
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idforks-post-openapi.md
-- name: Open Science Framework List all identifiers
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all identifiers
+  x-api-slug: nodesnode-ididentifiers-get
   description: |-
     List all identifiers associated with a given node.
     ####Returns
@@ -1257,13 +1257,13 @@ apis:
     Identifiers may be filtered by their `category` e.g `ark` or `doi`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/identifiers/
-  tags: Nodes,Nodeentifiers
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-ididentifiers-get-openapi.md
-- name: Open Science Framework List all institutions
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all institutions
+  x-api-slug: nodesnode-idinstitutions-get
   description: |-
     List of all institutions affiliated with this node.
     ####Returns
@@ -1274,13 +1274,13 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/institutions/
-  tags: Nodes,Node,Institutions
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idinstitutions-get-openapi.md
-- name: Open Science Framework List all linked nodes
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all linked nodes
+  x-api-slug: nodesnode-idlinked-nodes-get
   description: |-
     List of all nodes linked to the given node.
     ####Returns
@@ -1295,13 +1295,13 @@ apis:
     Nodes may be filtered by their `title`, `category`, `description`, `public`, `registration`, or `tags`. `title`, `description`, and `category` are string fields and will be filteres using simple substring matching. `public`, `registration` are boolean and can be filtered using truthy values, such as `true`, `false`, `0`, `1`. `tags` is an array of simple strings.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/linked_nodes/
-  tags: Nodes,Node,Linked,Nodes
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idlinked-nodes-get-openapi.md
-- name: Open Science Framework List all logs
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all logs
+  x-api-slug: nodesnode-idlogs-get
   description: |-
     A paginated list of all logs associated with a given node.
 
@@ -1321,13 +1321,13 @@ apis:
     Nodes may be filtered by their `action`, and `date`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/logs/
-  tags: Nodes,Node,Logs
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idlogs-get-openapi.md
-- name: Open Science Framework List all preprints
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all preprints
+  x-api-slug: nodesnode-idpreprints-get
   description: |-
     A paginated list of preprints related to a given node. The returned preprints are sorted by their creation date, with the most recent preprints appearing first.
 
@@ -1340,13 +1340,13 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/preprints/
-  tags: Nodes,Node,Preprints
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idpreprints-get-openapi.md
-- name: Open Science Framework List all registrations
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all registrations
+  x-api-slug: nodesnode-idregistrations-get
   description: |-
     List of all registrations of the given node.
     ####Returns
@@ -1363,13 +1363,13 @@ apis:
     Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/registrations/
-  tags: Nodes,Node,Registrations
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idregistrations-get-openapi.md
-- name: Open Science Framework List all view only links
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all view only links
+  x-api-slug: nodesnode-idview-only-links-get
   description: |-
     List of view only links on a node.
     ####Returns
@@ -1390,15 +1390,15 @@ apis:
     View Only Links may be filtered based on their `name`, `anonymous` and `date_created` fields. Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/view_only_links/
-  tags: Nodes,Node,View,Only,Links
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idview-only-links-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idview-only-links-get-openapi.md
-- name: Open Science Framework Retrieve a view only link
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a view only link
+  x-api-slug: nodesnode-idview-only-linkslink-id-get
   description: |-
     Retrieves the details of a view only link on a node.
     ####Returns
@@ -1410,15 +1410,15 @@ apis:
     View only links on a node, public or private, are readable and writeable only by users that are administrators on the node.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/view_only_links/{link_id}/
-  tags: Nodes,Node,View,Only,Links,Link
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idview-only-linkslink-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idview-only-linkslink-id-get-openapi.md
-- name: Open Science Framework List all wikis
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all wikis
+  x-api-slug: nodesnode-idwikis-get
   description: |-
     List of wiki pages on a node.
     ####Returns
@@ -1435,13 +1435,13 @@ apis:
     Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//nodes/{node_id}/wikis/
-  tags: Nodes,Node,Wikis
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/nodesnode-idwikis-get-openapi.md
-- name: Open Science Framework List all preprint providers
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all preprint providers
+  x-api-slug: preprint-providers-get
   description: |-
     A paginated list of all preprint providers. The returned preprint providers are sorted by their creation date, with the most recent preprints appearing first.
     #### Returns
@@ -1458,13 +1458,13 @@ apis:
     Preprint Providers may be filtered by their `id`, `name`,  and `description`
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprint_providers/
-  tags: Preprint,Providers
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprint-providers-get-openapi.md
-- name: Open Science Framework Retrieve a preprint provider
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a preprint provider
+  x-api-slug: preprint-providerspreprint-provider-id-get
   description: |-
     Retrieves the details of a preprint provider.
     #### Returns
@@ -1514,13 +1514,13 @@ apis:
     The above structure would allow Architecture, Architectural Engineering, all of Architectural Engineering's children, Engineering, Aerospace Engineering, and Aerodynamics and Fluid Mechanics.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprint_providers/{preprint_provider_id}/
-  tags: Preprint,Providers,Preprint,Provider
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprint-providerspreprint-provider-id-get-openapi.md
-- name: Open Science Framework List all licenses
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all licenses
+  x-api-slug: preprint-providerspreprint-provider-idlicenses-get
   description: |-
     A paginated list of the licenses allowed bya preprint provider.
     #### Returns
@@ -1533,15 +1533,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprint_providers/{preprint_provider_id}/licenses/
-  tags: Preprint,Providers,Preprint,Provider,Licenses
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprint-providerspreprint-provider-idlicenses-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprint-providerspreprint-provider-idlicenses-get-openapi.md
-- name: Open Science Framework List all preprints
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all preprints
+  x-api-slug: preprint-providerspreprint-provider-idpreprints-get
   description: |-
     A paginated list of preprints from the specified preprint provider. The returned preprints are sorted by their creation date, with the most recent preprints appearing first.
     #### Returns
@@ -1559,13 +1559,13 @@ apis:
     Preprints may be filtered by their `id`, `is_published`, `date_created`, `date_modified`, and `provider`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprint_providers/{preprint_provider_id}/preprints/
-  tags: Preprint,Providers,Preprint,Provider,Preprints
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprint-providerspreprint-provider-idpreprints-get-openapi.md
-- name: Open Science Framework List all taxonomies
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all taxonomies
+  x-api-slug: preprint-providerspreprint-provider-idtaxonomies-get
   description: |-
     A paginated list of the taxonomies for a preprint provider. The returned preprint providers taxonomies are sorted by their creation date, with the most recent preprints appearing first.
     #### Returns
@@ -1578,13 +1578,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprint_providers/{preprint_provider_id}/taxonomies/
-  tags: Preprint,Providers,Preprint,Provider,Taxonomies
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprint-providerspreprint-provider-idtaxonomies-get-openapi.md
-- name: Open Science Framework List all preprints
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all preprints
+  x-api-slug: preprints-get
   description: |-
     A paginated list of preprints from all preprint providers. The returned preprints are sorted by their creation date, with the most recent preprints appearing first.
     #### Returns
@@ -1601,13 +1601,13 @@ apis:
     Preprints may be filtered by their `id`, `is_published`, `date_created`, `date_modified`, and `provider`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprints/
-  tags: Preprints
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprints-get-openapi.md
-- name: Open Science Framework Create a preprint
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a preprint
+  x-api-slug: preprints-post
   description: |-
     Creates a new preprint.
     #### Returns
@@ -1616,13 +1616,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprints/
-  tags: Preprints
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprints-post-openapi.md
-- name: Open Science Framework Retrieve a preprint
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a preprint
+  x-api-slug: preprintspreprint-id-get
   description: |-
     Retrieves the details of a preprint.
     #### Returns
@@ -1631,13 +1631,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprints/{preprint_id}/
-  tags: Preprints,Preprint
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprintspreprint-id-get-openapi.md
-- name: Open Science Framework Update a preprint
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a preprint
+  x-api-slug: preprintspreprint-id-patch
   description: |-
     Updates the specified preprint by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
     #### Returns
@@ -1646,39 +1646,39 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprints/{preprint_id}/
-  tags: Preprints,Preprint
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprintspreprint-id-patch-openapi.md
-- name: Open Science Framework Retrieve citation details
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve citation details
+  x-api-slug: preprintspreprint-idcitation-get
   description: |-
     The citation details for a preprint, in CSL format.
     #### Returns
     Returns a JSON object with a `data` key that contains the representation of the details necessary for the preprint citation.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprints/{preprint_id}/citation/
-  tags: Preprints,Preprint,Citation
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprintspreprint-idcitation-get-openapi.md
-- name: Open Science Framework Retrieve a styled citation
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a styled citation
+  x-api-slug: preprintspreprint-idcitationstyle-id-get
   description: |-
     The citation for a preprint in a specific style.
     #### Returns
     Returns a JSON object with a `data` key that contains the representation of the preprint citation, in the requested style.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//preprints/{preprint_id}/citation/{style_id}/
-  tags: Preprints,Preprint,Citation,Style
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/preprintspreprint-idcitationstyle-id-get-openapi.md
-- name: Open Science Framework List all registrations
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all registrations
+  x-api-slug: registrations-get
   description: |-
     A paginated list of registrations on the OSF to which the user has access.
 
@@ -1707,13 +1707,13 @@ apis:
     Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/
-  tags: Registrations
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrations-get-openapi.md
-- name: Open Science Framework Retrieve a registration
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a registration
+  x-api-slug: registrationsregistration-id-get
   description: |-
     Retrieve the details of a given registration.
     #### Permissions
@@ -1733,13 +1733,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/
-  tags: Registrations,Registration
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-id-get-openapi.md
-- name: Open Science Framework Update a registration
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a registration
+  x-api-slug: registrationsregistration-id-patch
   description: |-
     Updates a registration's privacy from **private** to **public**.
 
@@ -1754,13 +1754,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/
-  tags: Registrations,Registration
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-id-patch-openapi.md
-- name: Open Science Framework List all child registrations
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all child registrations
+  x-api-slug: registrationsregistration-idchildren-get
   description: |-
     A paginated list of children of a registration.
 
@@ -1782,13 +1782,13 @@ apis:
     Most fields are string fields and will be filtered using simple substring matching. Public is a boolean field, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting true or false in the query will cause the match to fail.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/children/
-  tags: Registrations,Registration,Children
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idchildren-get-openapi.md
-- name: Open Science Framework List all citation styles
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all citation styles
+  x-api-slug: registrationsregistration-idcitations-get
   description: |-
     A paginated list of the registration's alternative citation styles
 
@@ -1804,26 +1804,26 @@ apis:
     Citation styles may be filtered by their `id`, `title`, `short-title`, and `summary`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/citations/
-  tags: Registrations,Registration,Citations
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idcitations-get-openapi.md
-- name: Open Science Framework Retrieve a citation
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a citation
+  x-api-slug: registrationsregistration-idcitationscitation-id-get
   description: |-
     Retrieves the citation style details for a registration, in CSL format.
     #### Returns
     Returns a JSON object with a `data` key that contains the representation of the details necessary for the citation style.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/citations/{citation_id}/
-  tags: Registrations,Registration,Citations,Citation
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idcitationscitation-id-get-openapi.md
-- name: Open Science Framework List all comments
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all comments
+  x-api-slug: registrationsregistration-idcomments-get
   description: |-
     A paginated list of the registration's comments.
 
@@ -1850,13 +1850,13 @@ apis:
     Most fields are string fields and will be filtered using simple substring matching. Deleted is a boolean field, and can be filtered using truthy values, such as **true**, **false**, **0** or **1**. Note that quoting `true` or `false` in the query will cause the match to fail.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/comments/
-  tags: Registrations,Registration,Comments
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idcomments-get-openapi.md
-- name: Open Science Framework List all contributors
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all contributors
+  x-api-slug: registrationsregistration-idcontributors-get
   description: |-
     A paginated list of all contributors on this registration.
     The returned contributors are sorted by their index.
@@ -1879,13 +1879,13 @@ apis:
     Contributors may be filtered by their `bibliographic` and `permission` attributes.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/contributors/
-  tags: Registrations,Registration,Contributors
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idcontributors-get-openapi.md
-- name: Open Science Framework Retrieve a contributor
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a contributor
+  x-api-slug: registrationsregistration-idcontributorsuser-id-get
   description: |-
     Retrieves the details of a contributor on this registration.
 
@@ -1895,13 +1895,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/contributors/{user_id}/
-  tags: Registrations,Registration,Contributors,User
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idcontributorsuser-id-get-openapi.md
-- name: Open Science Framework List all storage providers
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all storage providers
+  x-api-slug: registrationsregistration-idfiles-get
   description: |-
     A paginated list of storage providers enabled on the registration
 
@@ -1918,13 +1918,13 @@ apis:
     Note: In the OSF filesystem model, providers are treated as folders, but with special properties that distinguish them from regular folders. Every provider folder is considered a root folder, and may not be deleted through the regular file API.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/files/
-  tags: Registrations,Registration,Files
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idfiles-get-openapi.md
-- name: Open Science Framework List all files
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all files
+  x-api-slug: registrationsregistration-idfilesprovider-get
   description: |-
     List of all the registration's files/folders for a given storage provider.
 
@@ -1943,13 +1943,13 @@ apis:
     Files may be filtered by `id`, `name`, `node`, `kind`, `path`, `provider`, `size`, and `last_touched`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/files/{provider}/
-  tags: Registrations,Registration,Files,Provider
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idfilesprovider-get-openapi.md
-- name: Open Science Framework Retrieve a file
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a file
+  x-api-slug: registrationsregistration-idfilesproviderpath-get
   description: |-
     Retrieves the details of a registration file for the given storage provider.
     ####Returns
@@ -1958,31 +1958,34 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/files/{provider}/{path}/
-  tags: Registrations,Registration,Files,Provider,Path
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idfilesproviderpath-get-openapi.md
-- name: Open Science Framework List all forks
-  x-api-slug: open-science-framework
-  description: "A paginated list of the registration\u2019s forks\n\nThe returned
-    forks are sorted by their `forked_date`, with the most recent forks appearing
-    first.\n\nForking a registration creates a copy of an existing registration and
-    all of its contents.\n#### Returns\nReturns a JSON object containing `data` and
-    `links` keys.\n\nThe `data` key contains an array of up to 10 forks. If the current
-    registration has no fork, the `data` key will contain an empty array. Each resource
-    in the array is a separate registration object and contains the full representation
-    of the registration's fork.\n\nThe `links` key contains a dictionary of links
-    that can be used for [pagination](#Introduction_pagination)."
+- name: Open Science Framework - List all forks
+  x-api-slug: registrationsregistration-idforks-get
+  description: |-
+    A paginated list of the registration???s forks
+
+    The returned forks are sorted by their `forked_date`, with the most recent forks appearing first.
+
+    Forking a registration creates a copy of an existing registration and all of its contents.
+    #### Returns
+    Returns a JSON object containing `data` and `links` keys.
+
+    The `data` key contains an array of up to 10 forks. If the current registration has no fork, the `data` key will contain an empty array. Each resource in the array is a separate registration object and contains the full representation of the registration's fork.
+
+    The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/forks/
-  tags: Registrations,Registration,Forks
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idforks-get-openapi.md
-- name: Open Science Framework Create a fork
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Create a fork
+  x-api-slug: registrationsregistration-idforks-post
   description: |-
     Creates a fork of the given registration.
 
@@ -2000,13 +2003,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/forks/
-  tags: Registrations,Registration,Forks
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idforks-post-openapi.md
-- name: Open Science Framework List all identifiers
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all identifiers
+  x-api-slug: registrationsregistration-ididentifiers-get
   description: |-
     A paginated list of the registration's identifiers.
     ####Returns
@@ -2022,13 +2025,13 @@ apis:
     Identifiers may be filtered by their `category` e.g `ark` or `doi`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/identifiers/
-  tags: Registrations,Registrationentifiers
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-ididentifiers-get-openapi.md
-- name: Open Science Framework List all institutions
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all institutions
+  x-api-slug: registrationsregistration-idinstitutions-get
   description: |-
     A paginated list of institutions affiliated with the registration.
     ####Returns
@@ -2039,13 +2042,13 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/institutions/
-  tags: Registrations,Registration,Institutions
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idinstitutions-get-openapi.md
-- name: Open Science Framework List all linked nodes
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all linked nodes
+  x-api-slug: registrationsregistration-idlinked-nodes-get
   description: |-
     List of all nodes linked to the registration.
     ####Returns
@@ -2060,13 +2063,13 @@ apis:
     Nodes may be filtered by their `title`, `category`, `description`, `public`, `registration`, or `tags`. `title`, `description`, and `category` are string fields and will be filteres using simple substring matching. `public`, `registration` are boolean and can be filtered using truthy values, such as `true`, `false`, `0`, `1`. `tags` is an array of simple strings.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/linked_nodes/
-  tags: Registrations,Registration,Linked,Nodes
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idlinked-nodes-get-openapi.md
-- name: Open Science Framework List all logs
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all logs
+  x-api-slug: registrationsregistration-idlogs-get
   description: |-
     A paginated list of the registration's logs.
 
@@ -2084,13 +2087,13 @@ apis:
     Logs may be filtered by their `action`, and `date`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/logs/
-  tags: Registrations,Registration,Logs
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idlogs-get-openapi.md
-- name: Open Science Framework List all view only links
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all view only links
+  x-api-slug: registrationsregistration-idview-only-links-get
   description: |-
     A paginated list of view only links created for this registration.
     ####Returns
@@ -2111,15 +2114,15 @@ apis:
     View Only Links may be filtered based on their `name`, `anonymous` and `date_created` fields. Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/view_only_links/
-  tags: Registrations,Registration,View,Only,Links
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idview-only-links-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idview-only-links-get-openapi.md
-- name: Open Science Framework Retrieve a view only link
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a view only link
+  x-api-slug: registrationsregistration-idview-only-linkslink-id-get
   description: |-
     Retrieves the details of a view only link created from this registration.
     ####Returns
@@ -2131,15 +2134,15 @@ apis:
     View only links on a registration, public or private, are readable and writeable only by users that are administrators on the registration.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/view_only_links/{link_id}/
-  tags: Registrations,Registration,View,Only,Links,Link
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idview-only-linkslink-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idview-only-linkslink-id-get-openapi.md
-- name: Open Science Framework List all wikis
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all wikis
+  x-api-slug: registrationsregistration-idwikis-get
   description: |-
     A paginated list of the registration's wiki pages
     ####Returns
@@ -2154,13 +2157,13 @@ apis:
     Possible comparison operators include 'gt' (greater than), 'gte'(greater than or equal to), 'lt' (less than) and 'lte' (less than or equal to). The date must be in the format YYYY-MM-DD and the time is optional.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//registrations/{registration_id}/wikis/
-  tags: Registrations,Registration,Wikis
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/registrationsregistration-idwikis-get-openapi.md
-- name: Open Science Framework List all taxonomies
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all taxonomies
+  x-api-slug: taxonomies-get
   description: |-
     A paginated list of all [bepress disciplines taxonomies](https://www.bepress.com/wp-content/uploads/2016/12/Digital-Commons-Disciplines-taxonomy-2017-01.pdf).
     Note: this API endpoint is under active development, and is subject to change in the future.
@@ -2178,13 +2181,13 @@ apis:
     Taxonomies may be filtered by their `id`, `parents`, and `text`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//taxonomies/
-  tags: Taxonomies
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/taxonomies-get-openapi.md
-- name: Open Science Framework Retrieve a taxonomy
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a taxonomy
+  x-api-slug: taxonomiestaxonomy-id-get
   description: |-
     Retrieves the details of a taxonomy.
     #### Returns
@@ -2194,13 +2197,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//taxonomies/{taxonomy_id}/
-  tags: Taxonomies,Taxonomy
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/taxonomiestaxonomy-id-get-openapi.md
-- name: Open Science Framework List all users
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all users
+  x-api-slug: users-get
   description: |-
     A paginated list of all users registered on the OSF. The returned users are sorted by their `date_registered`, with the most recently registered users appearing first.
 
@@ -2221,15 +2224,15 @@ apis:
     Users may be filtered by their `id`, `full_name`, `given_name`, `middle_name`, or `family_name`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/
-  tags: Users
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/users-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/users-get-openapi.md
-- name: Open Science Framework Retrieve a user
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a user
+  x-api-slug: usersuser-id-get
   description: |-
     Retrieves the details of a given users.
 
@@ -2244,15 +2247,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/
-  tags: Users,User
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-id-get-openapi.md
-- name: Open Science Framework Update a user
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Update a user
+  x-api-slug: usersuser-id-patch
   description: |-
     Updates a user by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
 
@@ -2265,13 +2268,13 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/
-  tags: Users,User
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-id-patch-openapi.md
-- name: Open Science Framework List all user addons
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all user addons
+  x-api-slug: usersuser-idaddons-get
   description: |-
     A paginated list of authorized user addons
 
@@ -2291,13 +2294,13 @@ apis:
     Attempting to request the accounts for an addon that is not enabled will result in a **404 Not Found** response.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/addons/
-  tags: Users,User,Addons
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idaddons-get-openapi.md
-- name: Open Science Framework Retrieve a user addon
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a user addon
+  x-api-slug: usersuser-idaddonsprovider-get
   description: |-
     Retrieves the details of an authorized user addon
 
@@ -2313,13 +2316,13 @@ apis:
     Attempting to request the accounts for an addon that is not enabled will result in a **404 Not Found** response.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/addons/{provider}/
-  tags: Users,User,Addons,Provider
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idaddonsprovider-get-openapi.md
-- name: Open Science Framework List all addon accounts
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all addon accounts
+  x-api-slug: usersuser-idaddonsprovideraccounts-get
   description: |-
     A paginated list of addon accounts authorized by this user.
 
@@ -2335,15 +2338,15 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/addons/{provider}/accounts/
-  tags: Users,User,Addons,Provider,Accounts
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idaddonsprovideraccounts-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idaddonsprovideraccounts-get-openapi.md
-- name: Open Science Framework Retrieve an addon account
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve an addon account
+  x-api-slug: usersuser-idaddonsprovideraccountsaccount-id-get
   description: |-
     Retrieves the details of an addon account
 
@@ -2357,15 +2360,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/addons/{provider}/accounts/{account_id}/
-  tags: Users,User,Addons,Provider,Accounts,Account
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idaddonsprovideraccountsaccount-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idaddonsprovideraccountsaccount-id-get-openapi.md
-- name: Open Science Framework List all institutions
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all institutions
+  x-api-slug: usersuser-idinstitutions-get
   description: |-
     A paginated list of institutions that the user is affiliated with.
     #### Returns
@@ -2376,13 +2379,13 @@ apis:
     The `links` key contains a dictionary of links that can be used for [pagination](#Introduction_pagination).
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/institutions/
-  tags: Users,User,Institutions
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idinstitutions-get-openapi.md
-- name: Open Science Framework List all nodes
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all nodes
+  x-api-slug: usersuser-idnodes-get
   description: |-
     A paginated list of nodes that the user is a contributor to. The returned nodes are sorted by their `date_modified`, with the most recently updated nodes appearing first.
 
@@ -2401,13 +2404,13 @@ apis:
     Nodes may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, `preprint`, and `contributors`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/nodes/
-  tags: Users,User,Nodes
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idnodes-get-openapi.md
-- name: Open Science Framework List all preprints
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all preprints
+  x-api-slug: usersuser-idpreprints-get
   description: |-
     A paginated list of preprints that the user contributes to. The returned preprints are sorted by their creation date, with the most recent preprints appearing first.
     #### Returns
@@ -2422,13 +2425,13 @@ apis:
     Preprints may be filtered by their `id`, `is_published`, `date_created`, `date_modified`, and `provider`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/preprints/
-  tags: Users,User,Preprints
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idpreprints-get-openapi.md
-- name: Open Science Framework List all registrations
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all registrations
+  x-api-slug: usersuser-idregistrations-get
   description: |-
     A paginated list of registrations that the user is a contributor to. The returned registrations are sorted by their `date_modified`, with the most recently updated registrations appearing first.
 
@@ -2447,13 +2450,13 @@ apis:
     Registrations may be filtered by their `id`, `title`, `category`, `description`, `public`, `tags`, `date_created`, `date_modified`, `root`, `parent`, and `contributors`.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//users/{user_id}/registrations/
-  tags: Users,User,Registrations
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/usersuser-idregistrations-get-openapi.md
-- name: Open Science Framework Retrieve a view only link
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a view only link
+  x-api-slug: view-only-linkslink-id-get
   description: |-
     Retrieves details about a specific view only link.
     ####Permissions
@@ -2463,15 +2466,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//view_only_links/{link_id}/
-  tags: View,Only,Links,Link
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/view-only-linkslink-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/view-only-linkslink-id-get-openapi.md
-- name: Open Science Framework List all nodes
-  x-api-slug: open-science-framework
+- name: Open Science Framework - List all nodes
+  x-api-slug: view-only-linkslink-idnodes-get
   description: |-
     The list of nodes which this view only link gives read-only access to.
     #### Permissions
@@ -2485,15 +2488,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//view_only_links/{link_id}/nodes/
-  tags: View,Only,Links,Link,Nodes
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/view-only-linkslink-idnodes-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/view-only-linkslink-idnodes-get-openapi.md
-- name: Open Science Framework Retrieve a Wiki
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve a Wiki
+  x-api-slug: wikiswiki-id-get
   description: |-
     Retrieves the details about a specific wiki.
     A wiki is a collection of markdown text pages that can be used to describe the project or dataset of contained in the attached node.
@@ -2503,15 +2506,15 @@ apis:
     If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#Introduction_error_codes) to understand why this request may have failed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//wikis/{wiki_id}/
-  tags: Wikis,Wiki
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/wikiswiki-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/wikiswiki-id-get-openapi.md
-- name: Open Science Framework Retrieve the Content of a Wiki
-  x-api-slug: open-science-framework
+- name: Open Science Framework - Retrieve the Content of a Wiki
+  x-api-slug: wikiswiki-idcontent-get
   description: |-
     Retrieves the plaintext content of a wiki in markdown format.
     ####Returns
@@ -2519,33 +2522,20 @@ apis:
     If the request is unsuccessful, plaintext with the error message will be displayed.
   image: ""
   humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2//wikis/{wiki_id}/content/
-  tags: Wikis,Wiki,Content
+  baseURL: https://test-api.osf.io//v2
+  tags: Research, Science, API Provider, Profiles, General Data, Service API
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/wikiswiki-idcontent-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/wikiswiki-idcontent-get-openapi.md
-- name: Open Science Framework
-  x-api-slug: open-science-framework
-  description: OSF provides free and open source project management support for researchers
-    across the entire research lifecycle. As a collaboration tool, OSF helps researchers
-    work on projects privately with a limited number of collaborators and make parts
-    of their projects public, or make all the project publicly accessible for broader
-    dissemination. As a workflow system, OSF enables connections to the many services
-    researchers already use to streamline their process and increase efficiency. As
-    a flexible repository, it can store and archive research data, protocols, and
-    materials.
-  image: ""
-  humanURL: https://cos.io
-  baseURL: https://test-api.osf.io//v2
-  tags: Open Science Framework
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/open-science-framework/master/_listings/open-science-framework/openapi.md
 x-common:
 - type: x-website
   url: https://cos.io
+- type: x-api-gallery
+  url: http://open.fintech.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://open.science.framework.stack.network
 - type: x-github
   url: https://github.com/OSFramework
 - type: x-twitter
